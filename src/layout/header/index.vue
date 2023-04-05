@@ -1,11 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useSearch } from "./hooks/useSearch";
+
+const { searchInputValue } = useSearch();
+
+console.log(searchInputValue);
+</script>
 
 <template>
   <div class="layout-header">
     <div class="left">
-      <span></span>
+      <span class="logo">ＣＩＬＩＣＩＬＩ</span>
     </div>
-    <div class="center"></div>
+    <div class="center">
+      <n-input
+        v-model:value="searchInputValue"
+        type="text"
+        placeholder="基本的 Input"
+      />
+    </div>
     <div class="right"></div>
   </div>
 </template>
@@ -25,6 +37,14 @@
 
     display: flex;
     align-items: center;
+
+    .logo {
+      color: $primary-color;
+
+      font: {
+        weight: 2em;
+      }
+    }
   }
 
   .center {

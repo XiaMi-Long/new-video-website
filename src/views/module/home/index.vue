@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LayoutHeader from "@/layout/header/index.vue";
+import layout-header from "@/layout/header/index.vue";
 </script>
 
 <template>
